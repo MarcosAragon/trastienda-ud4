@@ -10,3 +10,52 @@ header {
 a {
   color: #6d28d9;
 }
+
+nav a[aria-current="page"] {
+  color: #6d28d9;
+  font-weight: bold;
+}
+
+nav a:not([aria-current="page"]) {
+  color: #6b7280;
+}
+
+nav a:not([aria-current="page"]):hover {
+  color: #1f2937;
+  text-decoration: underline;
+}
+
+nav a:not([aria-current="page"]):focus-visible {
+  outline: 3px solid #6d28d9;
+  outline-offset: 2px;
+}
+
+.card {
+  border: 1px solid #d1d5db;
+}
+
+h2 + .card {
+  border-top: 4px solid #6d28d9;
+}
+
+.badge {
+  background-color: #6d28d9;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.badge:empty {
+  display: none;
+}
+
+article:has(.badge:not(:empty)) {
+  background-color: #fef3c7;
+}
+
+button[aria-label] {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
